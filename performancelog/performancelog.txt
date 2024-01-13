@@ -1,0 +1,50 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--> 12 aug 2020, 1:00 pm
+apparently there is some problem crawling pages of server2.ftpbd.net
+some pages are almost freezing the crawler.
+check the netloc's couldntcrawl file to check the files that were causing problem
+
+similar freezing problems in cdn2.discoveryftp.net tooo
+check it's couldntcrawl file too
+
+
+
+
+-->9 aug 2020, 11:00 pm
+
+crawled:    http://103.102.253.250/Data/Data/
+            citycloud server
+videos found:   around 42,000
+time elapsed:   around 2 hour
+average crawling speed:     around 1.4 pages per second for most of the time
+NB: couldn't log exact result because the whole videodb was printed in the end
+    and console became full of this :(
+
+
+-->10 aug 2020, 11:00 am
+
+--one request per page; not sending request for head for checkin content type
+    local content type check by looking at link
+
+**run 1:
+crawled:    http://103.102.253.250/Data/Data/
+            citycloud server
+videos found:   2657
+time elapsed:   241 second
+average crawling speed:     11.51 pages per second
+
+**run 2
+crawled:    http://103.102.253.250/Data/Data/
+            citycloud server
+videos found:   13241
+time elapsed:   240 second
+average crawling speed:     10.06 pages per second
+
+
+
+--2 requests per page; sending request for head for checking content type
+crawled:    http://103.102.253.250/Data/Data/
+            citycloud server
+videos found:   1735
+time elapsed:   280 second
+average crawling speed:     6.33 pages per second
